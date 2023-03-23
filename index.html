@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Kalkulator BMI</h1>
+        <div class="content">
+          <div class="input">
+            <label for="height">Usia</label>
+            <input
+              type="text"
+              class="text-input"
+              id="usia"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="jenisKelamin">
+            <label class="container">
+              <input type="radio" name="radio" id="pria" />
+              <p class="text">Pria</p>
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="container">
+              <input type="radio" name="radio" id="wanita" />
+              <p class="text">Wanita</p>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div class="containerBT">
+            <div class="inputT">
+              <label for="height">Tinggi(cm)</label>
+              <input type="number" id="tinggi" required />
+            </div>
+
+            <div class="inputB">
+              <label for="weight">Berat(kg)</label>
+              <input type="number" id="berat" required />
+            </div>
+          </div>
+
+          <button class="hitung" id="submit" onclick="hitung();">
+            Hitung BMI
+          </button>
+        </div>
+        <div class="hasil">
+          <p>BMI Mu Adalah</p>
+          <div id="hasil">00.00</div>
+          <p class="comment"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
